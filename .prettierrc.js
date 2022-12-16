@@ -1,5 +1,4 @@
 // @ts-check
 
-// const { withSortImports } = require("@leomotors/config/prettier");
-
-// module.exports = withSortImports();
+const { withSortImports } = require("./dist/prettier");
+module.exports = withSortImports();

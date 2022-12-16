@@ -1,5 +1,4 @@
 // @ts-check
 
-const { config } = require("@leomotors/config/eslint");
-
+const { config } = require("./dist/eslint");
 module.exports = config();

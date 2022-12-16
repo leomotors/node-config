@@ -1,4 +1,4 @@
-import { PrettierConfig, SortImportsConfig } from "../utils";
+import { assertDeps, PrettierConfig, SortImportsConfig } from "../utils";
 
 import { orderDefault } from "./importOrders";
 
@@ -18,9 +18,11 @@ interface WithSortImportsOptions {
 }
 
 export function withSortImports({ importOrder }: WithSortImportsOptions = {}) {
+  assertDeps(["@ianvs/prettier-plugin-sort-imports"]);
+
   return {
     ...config(),
-    plugins: ["@trivago/prettier-plugin-sort-imports"],
+    plugins: ["@ianvs/prettier-plugin-sort-imports"],
     importOrder: importOrder ?? orderDefault,
     importOrderSeparation: true,
     importOrderSortSpecifiers: true,

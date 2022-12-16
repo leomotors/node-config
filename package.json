@@ -1,7 +1,7 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.2.0.experimental-5",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
@@ -44,7 +44,6 @@
     "prepack": "rm -rf dist && pnpm build"
   },
   "devDependencies": {
-    "@leomotors/config": "0.2.0-experimental.1",
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@types/eslint": "^8.4.10",
     "@types/node": "^18.11.15",
