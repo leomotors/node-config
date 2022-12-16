@@ -80,3 +80,14 @@ export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
     },
   } satisfies ESLintConfig;
 }
+
+export function nextConfig(opts?: ReactConfigOptions) {
+  assertDeps(["eslint-plugin-react", "eslint-plugin-next"]);
+
+  const base = reactConfig(opts);
+
+  return {
+    ...base,
+    extends: [...base.extends, "next/core-web-vitals"],
+  } satisfies ESLintConfig;
+}

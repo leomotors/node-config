@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.5.0] - 2022-12-16
+
+- feat: add eslint-config-next
+
 ## [0.4.0] - 2022-12-16
 
 - feat: add prettier-plugin-tailwindcss
