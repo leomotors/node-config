@@ -1,7 +1,7 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
@@ -21,8 +21,7 @@
   ],
   "exports": {
     "./eslint": "./dist/eslint.js",
-    "./prettier": "./dist/prettier/index.js",
-    "./prettier/importOrders": "./dist/prettier/importOrders.js"
+    "./prettier": "./dist/prettier/index.js"
   },
   "typesVersions": {
     "*": {
@@ -31,9 +30,6 @@
       ],
       "prettier": [
         "./dist/prettier/index.d.ts"
-      ],
-      "prettier/importOrders": [
-        "./dist/prettier/importOrders.d.ts"
       ]
     }
   },
@@ -41,7 +37,7 @@
     "build": "tsc",
     "lint": "eslint src",
     "format": "eslint src --fix",
-    "prepack": "rm -rf dist && pnpm build"
+    "prepack": "rm -rf dist && pnpm build && pnpm lint"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",

@@ -59,12 +59,8 @@ export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
   assertDeps(["eslint-plugin-react"]);
 
   return {
+    ..._config,
     plugins: [..._config.plugins, "react"],
-    extends: [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended",
-    ],
     rules: {
       ..._config.rules,
       "react/jsx-sort-props": [
