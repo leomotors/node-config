@@ -1,7 +1,7 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.2.0-experimental.3",
+  "version": "0.2.0-experimental.4",
   "license": "MIT",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
@@ -41,7 +41,7 @@
     "build": "tsc",
     "lint": "eslint src",
     "format": "eslint src --fix",
-    "prepack": "rm -rf dist && pnpm build && pnpm lint"
+    "prepack": "rm -rf dist && pnpm build"
   },
   "devDependencies": {
     "@leomotors/config": "0.2.0-experimental.1",
