@@ -82,7 +82,7 @@ export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
 }
 
 export function nextConfig(opts?: ReactConfigOptions) {
-  assertDeps(["eslint-plugin-react", "eslint-plugin-next"]);
+  assertDeps(["eslint-plugin-react", "eslint-config-next"]);
 
   const base = reactConfig(opts);
 

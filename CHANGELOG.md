@@ -2,6 +2,11 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.6.0] - 2022-12-16
+
+- fix: typo 💀
+- [breaking] feat: now require @ before org
+
 ## [0.5.0] - 2022-12-16
 
 - feat: add eslint-config-next

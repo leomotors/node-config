@@ -1,3 +1,5 @@
+export type OrgName = `@${string}`;
+
 export const orderDefault = [
   "^react",
   "^next",
@@ -18,11 +20,11 @@ export const orderNest = [
   "^[.]",
 ];
 
-export function orderNestWithOrg(org: string) {
+export function orderNestWithOrg(org: OrgName) {
   return [
     "^@nestjs",
     "<THIRD_PARTY_MODULES>",
-    `^@${org}`,
+    `^${org}`,
     "^src/",
     "^./prisma",
     "^./app",
@@ -41,12 +43,12 @@ export const orderNext = [
   "^[.]",
 ];
 
-export function orderNextWithOrg(org: string) {
+export function orderNextWithOrg(org: OrgName) {
   return [
     "^react",
     "^next",
     "<THIRD_PARTY_MODULES>",
-    `^@${org}`,
+    `^${org}`,
     "^\\$",
     "^\\$styles",
     "^[.][.]",
