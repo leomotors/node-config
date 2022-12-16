@@ -56,10 +56,11 @@ interface ReactConfigOptions {
 export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
   const _config = config();
 
-  assertDeps(["eslint-plugin-react"]);
+  assertDeps(["eslint-plugin-react", "eslint-plugin-jsx-a11y"]);
 
   return {
     ..._config,
+    extends: [..._config.extends, "plugin:jsx-a11y/recommended"],
     plugins: [..._config.plugins, "react"],
     rules: {
       ..._config.rules,
@@ -72,6 +73,7 @@ export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
       ],
       "react/jsx-key": "error",
       "react/display-name": "error",
+      "react/no-unescaped-entities": "off",
     },
     settings: {
       react: {
@@ -82,7 +84,11 @@ export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
 }
 
 export function nextConfig(opts?: ReactConfigOptions) {
-  assertDeps(["eslint-plugin-react", "eslint-config-next"]);
+  assertDeps([
+    "eslint-plugin-react",
+    "eslint-plugin-jsx-a11y",
+    "eslint-config-next",
+  ]);
 
   const base = reactConfig(opts);
 

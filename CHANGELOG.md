@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.7.0] - 2022-12-16
+
+- feat: eslint-plugin-jsx-11y
+
 ## [0.6.0] - 2022-12-16
 
 - fix: typo 💀
