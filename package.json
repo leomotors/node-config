@@ -1,7 +1,7 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.1.0",
+  "version": "0.2.0-experimental.1",
   "license": "MIT",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
@@ -38,7 +38,8 @@
     }
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepack": "rm -rf dist && pnpm build"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
