@@ -1,8 +1,5 @@
 lockfileVersion: 5.4
 
-overrides:
-  '@babel/parser': latest
-
 specifiers:
   '@ianvs/prettier-plugin-sort-imports': ^3.7.1
   '@types/eslint': ^8.4.10
