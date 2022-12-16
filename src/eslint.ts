@@ -1,4 +1,4 @@
-import { assertDeps, ESLintConfig } from "./utils";
+import { ESLintConfig, assertDeps } from "./utils";
 
 export function config() {
   return {
@@ -53,7 +53,7 @@ interface ReactConfigOptions {
   reactVersion?: string;
 }
 
-export function reactConfig({ reactVersion }: ReactConfigOptions) {
+export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
   const _config = config();
 
   assertDeps(["eslint-plugin-react"]);

@@ -1,4 +1,5 @@
 import { Linter } from "eslint";
+
 export { Config as PrettierConfig } from "prettier";
 export { PrettierConfig as SortImportsConfig } from "@trivago/prettier-plugin-sort-imports";
 

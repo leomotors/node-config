@@ -1,5 +1,6 @@
-import { orderDefault } from "./importOrders";
 import { PrettierConfig, SortImportsConfig } from "../utils";
+
+import { orderDefault } from "./importOrders";
 
 export function config() {
   return {
@@ -16,14 +17,10 @@ interface WithSortImportsOptions {
   importOrder?: string[];
 }
 
-export function withSortImports({ importOrder }: WithSortImportsOptions) {
+export function withSortImports({ importOrder }: WithSortImportsOptions = {}) {
   return {
     ...config(),
-    plugins: [
-      "@trivago/prettier-plugin-sort-imports",
-      "prettier-plugin-tailwindcss",
-    ],
-    pluginSearchDirs: false,
+    plugins: ["@trivago/prettier-plugin-sort-imports"],
     importOrder: importOrder ?? orderDefault,
     importOrderSeparation: true,
     importOrderSortSpecifiers: true,

@@ -1,7 +1,7 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.2.0-experimental.1",
+  "version": "0.2.0-experimental.2",
   "license": "MIT",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
@@ -39,38 +39,54 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepack": "rm -rf dist && pnpm build"
+    "lint": "eslint src",
+    "format": "eslint src --fix",
+    "prepack": "rm -rf dist && pnpm build && pnpm lint"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@leomotors/config": "0.2.0-experimental.1",
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@types/eslint": "^8.4.10",
     "@types/node": "^18.11.15",
     "@types/prettier": "^2.7.1",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
     "prettier": "^2.8.1",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@types/eslint": "^8.4.10",
     "@types/node": "^18.11.15",
     "@types/prettier": "^2.7.1",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
     "prettier": "^2.8.1",
     "typescript": "^4.9.4"
   },
   "peerDependenciesMeta": {
-    "@trivago/prettier-plugin-sort-imports": {
+    "@ianvs/prettier-plugin-sort-imports": {
       "optional": true
     },
     "eslint-plugin-react": {
       "optional": true
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/parser": "latest"
     }
   }
 }
