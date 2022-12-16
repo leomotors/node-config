@@ -29,3 +29,24 @@ export function withSortImports({ importOrder }: WithSortImportsOptions = {}) {
     importOrderParserPlugins: ["typescript", "decorators-legacy", "jsx"],
   } satisfies SortImportsConfig;
 }
+
+/**
+ * Sort Imports + TailwindCSS
+ */
+export function withTailwind(opts?: WithSortImportsOptions) {
+  assertDeps([
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+  ]);
+
+  const base = withSortImports(opts);
+
+  return {
+    ...base,
+    plugins: [
+      "@ianvs/prettier-plugin-sort-imports",
+      "prettier-plugin-tailwindcss",
+    ],
+    pluginSearchDirs: false,
+  } satisfies SortImportsConfig;
+}

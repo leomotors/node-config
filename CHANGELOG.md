@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.4.0] - 2022-12-16
+
+- feat: add prettier-plugin-tailwindcss
+
 ## [0.3.0] - 2022-12-16
 
 - experimental v3
