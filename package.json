@@ -1,7 +1,7 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.2.0-experimental.4",
+  "version": "0.2.0.experimental-5",
   "license": "MIT",
   "author": {
     "name": "Nutthapat Pongtanyavichai",

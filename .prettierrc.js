@@ -1,5 +1,5 @@
 // @ts-check
 
-const { withSortImports } = require("@leomotors/config/prettier");
+// const { withSortImports } = require("@leomotors/config/prettier");
 
-module.exports = withSortImports();
+// module.exports = withSortImports();
