@@ -61,7 +61,7 @@ export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
   return {
     ..._config,
     extends: [..._config.extends, "plugin:jsx-a11y/recommended"],
-    plugins: [..._config.plugins, "react"],
+    plugins: [..._config.plugins, "react", "react-hooks"],
     rules: {
       ..._config.rules,
       "react/jsx-sort-props": [
@@ -74,6 +74,8 @@ export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
       "react/jsx-key": "error",
       "react/display-name": "error",
       "react/no-unescaped-entities": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
     },
     settings: {
       react: {

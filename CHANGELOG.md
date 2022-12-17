@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.8.0] - 2022-12-17
+
+- feat: add react hooks to react preset
+
 ## [0.7.0] - 2022-12-16
 
 - feat: eslint-plugin-jsx-11y
