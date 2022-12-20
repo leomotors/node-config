@@ -1,4 +1,5 @@
 // @ts-check
 
-const { withSortImports } = require("./dist/prettier");
-module.exports = withSortImports();
+// Ensure compatibility of plugin and tailwind
+const { withTailwind } = require("./dist/prettier");
+module.exports = withTailwind();

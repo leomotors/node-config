@@ -1,3 +1,4 @@
+import { SortImportsPlugin } from "../constants";
 import { PrettierConfig, SortImportsConfig, assertDeps } from "../utils";
 
 import { orderDefault } from "./importOrders";
@@ -34,19 +35,13 @@ export function withSortImports({ importOrder }: WithSortImportsOptions = {}) {
  * Sort Imports + TailwindCSS
  */
 export function withTailwind(opts?: WithSortImportsOptions) {
-  assertDeps([
-    "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss",
-  ]);
+  assertDeps([SortImportsPlugin, "prettier-plugin-tailwindcss"]);
 
   const base = withSortImports(opts);
 
   return {
     ...base,
-    plugins: [
-      "@ianvs/prettier-plugin-sort-imports",
-      "prettier-plugin-tailwindcss",
-    ],
+    plugins: [SortImportsPlugin, "prettier-plugin-tailwindcss"],
     pluginSearchDirs: false,
   } satisfies SortImportsConfig;
 }

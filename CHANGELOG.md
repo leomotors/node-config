@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.9.0] - 2022-12-20
+
+- [experimental] revert to `@trivago/prettier-plugin-sort-imports`
+
 ## [0.8.0] - 2022-12-17
 
 - feat: add react hooks to react preset

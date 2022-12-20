@@ -1,7 +1,7 @@
 import { Linter } from "eslint";
 
 export { Config as PrettierConfig } from "prettier";
-export { PrettierConfig as SortImportsConfig } from "@ianvs/prettier-plugin-sort-imports";
+export { PrettierConfig as SortImportsConfig } from "@trivago/prettier-plugin-sort-imports";
 
 export type ESLintConfig = Linter.Config;
 
