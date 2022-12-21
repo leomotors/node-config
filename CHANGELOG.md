@@ -6,6 +6,9 @@ All notables change for @leomotors/config will be noted here
 
 - [experimental] revert to `@trivago/prettier-plugin-sort-imports`
 
+Note: You need to override `@babel/parser` to be `7.20.0` or later otherwise
+sort plugin won't work with `satisfies`
+
 ## [0.8.0] - 2022-12-17
 
 - feat: add react hooks to react preset

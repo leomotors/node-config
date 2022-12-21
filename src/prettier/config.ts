@@ -19,11 +19,11 @@ interface WithSortImportsOptions {
 }
 
 export function withSortImports({ importOrder }: WithSortImportsOptions = {}) {
-  assertDeps(["@ianvs/prettier-plugin-sort-imports"]);
+  assertDeps([SortImportsPlugin]);
 
   return {
     ...config(),
-    plugins: ["@ianvs/prettier-plugin-sort-imports"],
+    plugins: [SortImportsPlugin],
     importOrder: importOrder ?? orderDefault,
     importOrderSeparation: true,
     importOrderSortSpecifiers: true,

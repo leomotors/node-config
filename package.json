@@ -99,5 +99,10 @@
     "prettier-plugin-tailwindcss": {
       "optional": true
     }
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/parser": "^7.20.0"
+    }
   }
 }
