@@ -2,6 +2,11 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.9.1] - 2023-01-07
+
+- fix: wrong detail in package.json
+- no package changes
+
 ## [0.9.0] - 2022-12-20
 
 - [experimental] revert to `@trivago/prettier-plugin-sort-imports`

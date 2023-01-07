@@ -1,7 +1,7 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "license": "MIT",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Leomotors/music-bot"
+    "url": "https://github.com/Leomotors/node-config"
   },
   "publishConfig": {
     "access": "public"
