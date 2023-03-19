@@ -1,7 +1,7 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "license": "MIT",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
@@ -38,47 +38,48 @@
     "lint": "eslint src",
     "format": "eslint src --fix",
     "prepack": "rm -rf dist && pnpm build && pnpm lint",
-    "lint-strict": "eslint src --max-warnings=0"
+    "lint-strict": "eslint src --max-warnings=0",
+    "sync": "node tools/syncPeerDeps.mjs"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
-    "@types/eslint": "^8.4.10",
-    "@types/node": "^18.11.16",
-    "@types/prettier": "^2.7.1",
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
-    "eslint": "^8.30.0",
-    "eslint-config-next": "^13.0.7",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/eslint": "^8.21.2",
+    "@types/node": "^18.15.3",
+    "@types/prettier": "^2.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-next": "^13.2.4",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-sort-destructure-keys": "^1.4.0",
-    "prettier": "^2.8.1",
-    "prettier-plugin-tailwindcss": "^0.2.1",
-    "typescript": "^4.9.4"
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.5",
+    "typescript": "^5.0.2"
   },
   "peerDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
-    "@types/eslint": "^8.4.10",
-    "@types/node": "^18.11.16",
-    "@types/prettier": "^2.7.1",
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
-    "eslint": "^8.30.0",
-    "eslint-config-next": "^13.0.7",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/eslint": "^8.21.2",
+    "@types/node": "^18.15.3",
+    "@types/prettier": "^2.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-next": "^13.2.4",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-sort-destructure-keys": "^1.4.0",
-    "prettier": "^2.8.1",
-    "prettier-plugin-tailwindcss": "^0.2.1",
-    "typescript": "^4.9.4"
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.5",
+    "typescript": "^5.0.2"
   },
   "peerDependenciesMeta": {
     "@trivago/prettier-plugin-sort-imports": {
@@ -98,11 +99,6 @@
     },
     "prettier-plugin-tailwindcss": {
       "optional": true
-    }
-  },
-  "pnpm": {
-    "overrides": {
-      "@babel/parser": "^7.20.0"
     }
   }
 }

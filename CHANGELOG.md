@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.10.0] - 2023-03-19
+
+- chore: bump dependencies
+
 ## [0.9.1] - 2023-01-07
 
 - fix: wrong detail in package.json
