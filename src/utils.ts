@@ -24,6 +24,8 @@ export function assertDeps(names: string[]) {
   }
 
   throw new Error(
-    `To use this preset, you are missing these dependencies: ${fail.join(", ")}`
+    `To use this preset, you are missing these dependencies: ${fail.join(
+      ", ",
+    )}`,
   );
 }

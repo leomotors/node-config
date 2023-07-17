@@ -16,15 +16,15 @@ Install peer dependencies too (auto-install-peers might not work here in some ca
 
 ```bash
 pnpm add -D @types/eslint @typescript-eslint/parser eslint-plugin-sort-destructure-keys \
-  @types/node eslint-config-prettier eslint \
-  @types/prettier eslint-plugin-import \
+  @types/node@18 eslint-config-prettier \
+  eslint eslint-plugin-import \
   @typescript-eslint/eslint-plugin eslint-plugin-prettier
 ```
 
 More peer dependencies are needed for some preset
 
 ```bash
-pnpm add -D @ianvs/prettier-plugin-sort-imports eslint-config-next \
+pnpm add -D @trivago/prettier-plugin-sort-imports eslint-config-next \
   eslint-plugin-jsx-a11y eslint-plugin-react \
   eslint-plugin-react-hooks prettier-plugin-tailwindcss
 ```

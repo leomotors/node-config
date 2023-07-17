@@ -42,6 +42,5 @@ export function withTailwind(opts?: WithSortImportsOptions) {
   return {
     ...base,
     plugins: [SortImportsPlugin, "prettier-plugin-tailwindcss"],
-    pluginSearchDirs: false,
   } satisfies SortImportsConfig;
 }

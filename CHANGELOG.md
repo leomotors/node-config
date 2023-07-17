@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [0.11.0] - 2023-07-17
+
+- feat: bump prettier to v3 + eslint-plugin-prettier v5 and typescript-eslint v6
+
 ## [0.10.0] - 2023-03-19
 
 - chore: bump dependencies
