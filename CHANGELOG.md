@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [1.0.0-rc.1] - 2025-02-07
+
+- fix: type exports
+
 ## [1.0.0-rc.0] - 2025-02-07
 
 - extracted eslint config from https://github.com/thinc-org/cugetreg

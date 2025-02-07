@@ -25,6 +25,9 @@ jobs:
     name: Publish Package
     runs-on: ubuntu-latest
 
+    env:
+      NPM_CONFIG_PROVENANCE: true
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
