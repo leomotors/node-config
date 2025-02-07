@@ -1,101 +1,60 @@
-import { ESLintConfig, assertDeps } from "./utils";
+import eslint from "@eslint/js";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import unusedImports from "eslint-plugin-unused-imports";
+import tseslint from "typescript-eslint";
 
-export function config() {
-  return {
-    root: true,
-    parser: "@typescript-eslint/parser",
-    plugins: [
-      "@typescript-eslint/eslint-plugin",
-      "import",
-      "sort-destructure-keys",
-    ],
-    extends: [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended",
-    ],
-    rules: {
-      "prettier/prettier": "warn",
-      eqeqeq: "warn",
-      "no-constant-binary-expression": "error",
-      "import/no-cycle": "warn",
-      "@typescript-eslint/no-unused-vars": [
-        "warn",
-        {
-          argsIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
-          caughtErrorsIgnorePattern: "^_",
-        },
-      ],
-      "sort-destructure-keys/sort-destructure-keys": "warn",
-    },
-    overrides: [
-      {
-        files: [".eslintrc.*", ".prettierrc.*", "*.config.js"],
-        rules: {
-          "@typescript-eslint/no-var-requires": "off",
-          "no-undef": "off",
-        },
+import { defaultIgnores } from "./ignores.js";
+import { defaultImportOrder } from "./importOrder.js";
+
+export type CreateESLintOption = {
+  importOrder?: string[];
+  ignores?: string[];
+};
+
+export function createESLintConfig({
+  importOrder = defaultImportOrder(),
+  ignores = defaultIgnores,
+}: CreateESLintOption = {}): tseslint.ConfigArray {
+  return tseslint.config(
+    eslint.configs.recommended,
+    ...tseslint.configs.recommended,
+    {
+      plugins: {
+        "unused-imports": unusedImports,
       },
-    ],
-    ignorePatterns: [
-      "build",
-      "dist",
-      "out",
-      "output",
-      "generated",
-      "@generated",
-    ],
-  } satisfies ESLintConfig;
-}
-
-interface ReactConfigOptions {
-  reactVersion?: string;
-}
-
-export function reactConfig({ reactVersion }: ReactConfigOptions = {}) {
-  const _config = config();
-
-  assertDeps(["eslint-plugin-react", "eslint-plugin-jsx-a11y"]);
-
-  return {
-    ..._config,
-    extends: [..._config.extends, "plugin:jsx-a11y/recommended"],
-    plugins: [..._config.plugins, "react", "react-hooks"],
-    rules: {
-      ..._config.rules,
-      "react/jsx-sort-props": [
-        "warn",
-        {
-          callbacksLast: true,
-          reservedFirst: true,
-        },
-      ],
-      "react/jsx-key": "error",
-      "react/display-name": "error",
-      "react/no-unescaped-entities": "off",
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-    },
-    settings: {
-      react: {
-        version: reactVersion ?? "^18.2.0",
+      rules: {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          {
+            vars: "all",
+            varsIgnorePattern: "^(_|\\$)",
+            args: "after-used",
+            argsIgnorePattern: "^_",
+          },
+        ],
       },
     },
-  } satisfies ESLintConfig;
-}
-
-export function nextConfig(opts?: ReactConfigOptions) {
-  assertDeps([
-    "eslint-plugin-react",
-    "eslint-plugin-jsx-a11y",
-    "eslint-config-next",
-  ]);
-
-  const base = reactConfig(opts);
-
-  return {
-    ...base,
-    extends: [...base.extends, "next/core-web-vitals"],
-  } satisfies ESLintConfig;
+    {
+      plugins: {
+        "simple-import-sort": simpleImportSort,
+      },
+      rules: {
+        "simple-import-sort/exports": "error",
+        "simple-import-sort/imports": [
+          "error",
+          {
+            groups: importOrder.map((x) => [x]),
+          },
+        ],
+      },
+    },
+    {
+      ignores,
+    },
+    eslintPluginPrettierRecommended,
+  );
 }

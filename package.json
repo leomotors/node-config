@@ -1,16 +1,17 @@
 {
   "name": "@leomotors/config",
   "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "0.11.0",
+  "version": "1.0.0-rc.0",
   "license": "MIT",
-  "packageManager": "pnpm@8.6.8",
+  "type": "module",
+  "packageManager": "pnpm@10.2.1",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
-    "url": "https://github.com/Leomotors"
+    "url": "https://github.com/leomotors"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Leomotors/node-config"
+    "url": "https://github.com/leomotors/node-config"
   },
   "publishConfig": {
     "access": "public"
@@ -43,61 +44,16 @@
     "sync": "node tools/syncPeerDeps.mjs"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/eslint": "^8.44.0",
-    "@types/node": "^18.16.19",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.45.0",
-    "eslint-config-next": "^13.4.10",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-sort-destructure-keys": "^1.5.0",
-    "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.4.1",
     "typescript": "^5.1.6"
   },
-  "peerDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/eslint": "^8.44.0",
-    "@types/node": "^18.16.19",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.45.0",
-    "eslint-config-next": "^13.4.10",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-sort-destructure-keys": "^1.5.0",
-    "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.4.1",
-    "typescript": "^5.1.6"
-  },
-  "peerDependenciesMeta": {
-    "@trivago/prettier-plugin-sort-imports": {
-      "optional": true
-    },
-    "eslint-config-next": {
-      "optional": true
-    },
-    "eslint-plugin-jsx-a11y": {
-      "optional": true
-    },
-    "eslint-plugin-react": {
-      "optional": true
-    },
-    "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "prettier-plugin-tailwindcss": {
-      "optional": true
-    }
+  "dependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "prettier": "^3.4.2",
+    "typescript-eslint": "^8.23.0"
   }
 }

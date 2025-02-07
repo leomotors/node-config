@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [1.0.0-rc.0] - 2025-02-07
+
+- extracted eslint config from https://github.com/thinc-org/cugetreg
+
 ## [0.11.0] - 2023-07-17
 
 - feat: bump prettier to v3 + eslint-plugin-prettier v5 and typescript-eslint v6
