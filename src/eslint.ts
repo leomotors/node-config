@@ -34,6 +34,7 @@ export function createESLintConfig({
             varsIgnorePattern: "^(_|\\$)",
             args: "after-used",
             argsIgnorePattern: "^_",
+            caughtErrorsIgnorePattern: "^_",
           },
         ],
       },

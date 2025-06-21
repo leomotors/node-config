@@ -2,6 +2,11 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [1.0.0] - 2025-06-21
+
+- feat: configure unused imports to exclude caught errors pattern
+- feat: importOrders now export individual order as meaningful const name
+
 ## [1.0.0-rc.1] - 2025-02-07
 
 - fix: type exports
