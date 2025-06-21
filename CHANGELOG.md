@@ -2,6 +2,10 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [1.0.1] - 2025-06-21
+
+- docs: update readme
+
 ## [1.0.0] - 2025-06-21
 
 - feat: configure unused imports to exclude caught errors pattern

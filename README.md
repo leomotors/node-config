@@ -12,21 +12,28 @@ My personal config for node projects, include ESLint Prettier and TSConfig
 pnpm add -D @leomotors/config
 ```
 
-Install peer dependencies too (auto-install-peers might not work here in some cases)
+## Usage
 
-```bash
-pnpm add -D @types/eslint @typescript-eslint/parser eslint-plugin-sort-destructure-keys \
-  @types/node@18 eslint-config-prettier \
-  eslint eslint-plugin-import \
-  @typescript-eslint/eslint-plugin eslint-plugin-prettier
+File: `eslint.config.js`
+
+```js
+import { createESLintConfig } from "@leomotors/config";
+export default createESLintConfig();
 ```
 
-More peer dependencies are needed for some preset
+To add other rules:
 
-```bash
-pnpm add -D @trivago/prettier-plugin-sort-imports eslint-config-next \
-  eslint-plugin-jsx-a11y eslint-plugin-react \
-  eslint-plugin-react-hooks prettier-plugin-tailwindcss
+```js
+import { createESLintConfig } from "@leomotors/config";
+import { defineConfig } from "eslint/config";
+
+export default defineConfig([
+  ...createESLintConfig(),
+  {
+    files: ["**/*.ts", "**/*.svelte", "**/*.mts"],
+    rules: {
+      "no-undef": "off",
+    },
+  },
+]);
 ```
-
-Some config require extra dependencies
