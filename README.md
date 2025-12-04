@@ -4,7 +4,7 @@
 [![](https://img.shields.io/npm/dt/@leomotors/config.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/config)
 [![](https://github.com/Leomotors/node-config/actions/workflows/test.yml/badge.svg)](https://github.com/Leomotors/node-config/actions)
 
-My personal config for node projects, include ESLint Prettier and TSConfig
+My personal config for node projects, include ESLint Config
 
 ## Install
 
@@ -27,7 +27,7 @@ To add other rules:
 import { createESLintConfig } from "@leomotors/config";
 import { defineConfig } from "eslint/config";
 
-export default defineConfig([
+export default defineConfig(
   ...createESLintConfig(),
   {
     files: ["**/*.ts", "**/*.svelte", "**/*.mts"],
@@ -35,5 +35,5 @@ export default defineConfig([
       "no-undef": "off",
     },
   },
-]);
+);
 ```

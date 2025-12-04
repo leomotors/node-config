@@ -1,4 +1,5 @@
 import eslint from "@eslint/js";
+import { defineConfig } from "eslint/config";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import unusedImports from "eslint-plugin-unused-imports";
@@ -15,8 +16,8 @@ export type CreateESLintOption = {
 export function createESLintConfig({
   importOrder = defaultImportOrder(),
   ignores = defaultIgnores,
-}: CreateESLintOption = {}): tseslint.ConfigArray {
-  return tseslint.config(
+}: CreateESLintOption = {}) {
+  return defineConfig(
     eslint.configs.recommended,
     ...tseslint.configs.recommended,
     {

@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Publish Release
         uses: leomotors/release-action@v6
@@ -26,21 +26,19 @@ jobs:
     name: Publish Package
     runs-on: ubuntu-latest
 
-    env:
-      NPM_CONFIG_PROVENANCE: true
-
     permissions:
       id-token: write
+      contents: read
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
       - name: Setup node with cache
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           cache: pnpm
@@ -52,5 +50,3 @@ jobs:
       - name: Publish Package
         run: |
           pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

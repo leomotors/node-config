@@ -1,12 +1,12 @@
 {
   "name": "@leomotors/config",
-  "description": "My personal config for node projects, include ESLint Prettier and TSConfig",
-  "version": "1.0.1",
+  "description": "My personal config for node projects, include ESLint Config",
+  "version": "1.1.0",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.24.0",
   "author": {
     "name": "Nutthapat Pongtanyavichai",
     "url": "https://github.com/leomotors"
@@ -28,20 +28,19 @@
     "lint": "eslint src",
     "format": "eslint src --fix",
     "prepack": "rm -rf dist && pnpm build && pnpm lint",
-    "lint-strict": "eslint src --max-warnings=0",
-    "sync": "node tools/syncPeerDeps.mjs"
+    "lint-strict": "eslint src --max-warnings=0"
   },
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@eslint/js": "^9.29.0",
-    "eslint": "^9.29.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.5.0",
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-unused-imports": "^4.1.4",
-    "prettier": "^3.5.3",
-    "typescript-eslint": "^8.34.1"
+    "eslint-plugin-unused-imports": "^4.3.0",
+    "prettier": "^3.7.4",
+    "typescript-eslint": "^8.48.1"
   }
 }

@@ -2,6 +2,11 @@
 
 All notables change for @leomotors/config will be noted here
 
+## [1.1.0] - 2025-12-04
+
+- chore: bump dependencies
+- feat: use `defineConfig` instead of `tseslint.config`
+
 ## [1.0.1] - 2025-06-21
 
 - docs: update readme
